@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Global Reset and Base Styles
+   Walking Directions Test Application
+   ========================================================================== */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: #1a1a1a;
+}
+
+/* Root Container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Accessibility Styles
+   ========================================================================== */
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Ensure good contrast for screen readers */
+@media (prefers-contrast: high) {
+  body {
+    background: #000000;
+    color: #ffffff;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
