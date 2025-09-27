@@ -87,10 +87,13 @@ Presentation of AI Sight [Presentation Link](https://www.canva.com/design/DAG0E9
 
 ### 🤖 "Sarah" — AI Assistant on PC
 
-- PC-only voice assistant  
+- Connects Phone to PC
 - Helps with extended tasks and interactions  
 - Demo video (1 min & 55s): [🎥 Sarah AI Assistant – Demo](https://m.youtube.com/shorts/CQT7NVY8hOw)
-
+- Whatsapp, email messages
+- Opens Apps on
+- **Full browser control**
+- Weather
 
 ---
 
