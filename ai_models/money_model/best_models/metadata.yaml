@@ -1,0 +1,11 @@
+description: Jordan Coin Detector
+version: 8.3.170
+imgsz: [640, 640]
+stride: 32
+names:
+  0: 1
+  1: 10
+  2: 20
+  3: 5
+  4: 50
+nc: 5

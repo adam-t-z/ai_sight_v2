@@ -1,84 +1,112 @@
-# AI Sight - Walking Directions Assistant
+# AI Sight - Blind People
 
-A pwa (progressive web app that has OFFLINE features) AI application designed to assist visually impaired users with navigation and object detection using computer vision and text-to-speech technology.
+A PWA to help blind people navigate their way around the world.
 
-presentation:
-https://www.canva.com/design/DAG0E9aRTEk/VLnPrsdst3PRbWGfe3-xWA/view?utm_content=DAG0E9aRTEk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h45a1f11f82
-
-## Key Features
-
-### 🏠 Offline Capabilities
-- **Money Detection**: Completely offline AI processing - no internet required
-- **Door Detection**: Local YOLOv8 model runs entirely in your browser
-- **Privacy First**: No images or data sent to external servers for these features
-
-### 🏠 Home Screen
-- Central navigation hub with voice announcements
-- Easy access to all detection features
-- Intuitive button layout for accessibility
-
-### 🚶 Walking Directions
-- Real-time GPS-based navigation assistance
-- Turn-by-turn voice directions
-- Integration with Google Maps for accurate routing
-- Continuous location tracking and updates
-
-### 🚪 Door Detection
-- **Works completely offline** - AI-powered door recognition using YOLOv8
-- Real-time camera feed analysis with local processing
-- Visual bounding boxes around detected doors
-- Voice announcements of door locations
-- No internet connection required for detection
-
-### 💰 Money Detection
-- **Works completely offline** - Currency recognition and counting
-- Local AI model identifies and calculates total monetary value
-- Supports multiple denomination detection
-- Audio feedback with detected amounts in dinars
-- No data sent to external servers
-
-### 📖 Image Text Reader (OCR)
-- Optical Character Recognition for text in images
-- Converts written text to speech
-- Supports various text formats and languages
-- Camera capture or image upload options
-
-### 🔍 View Description
-- AI-powered scene description
-- Detailed audio descriptions of surroundings
-- Helps users understand their environment
-- Real-time image analysis and narration
-
-### 🎤 Voice Features
-- Google Text-to-Speech integration
-- Multiple voice options and languages
-- Clear audio feedback for all detections
-- Fallback to browser speech synthesis
-
-## Technology Stack
-
-- **Frontend**: React with Vite
-- **AI/ML**: TensorFlow.js, YOLOv8
-- **Maps**: Google Maps API
-- **Speech**: Google TTS API, Web Speech API
-- **Camera**: WebRTC for real-time video processing
-
-## Quick Start
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open in browser and allow camera/microphone permissions
-
-## Accessibility
-
-Designed specifically for visually impaired users with:
-- Voice-first interface design
-- Large, accessible buttons
-- Comprehensive audio feedback
-- Keyboard navigation support
-- High contrast visual elements
+**PWA**: a website that can turn into a phone application.
+- Looks like a phone app: like gallery, calculator, etc.  
+- Can have **OFFLINE** features  
+- Works on all kinds of operating systems  
 
 ---
 
-*This application leverages cutting-edge AI technology to provide independence and confidence for users with visual impairments.*
+**Video Demo (1 min & 55s): [🎥 Sarah Feature – Demo](https://m.youtube.com/shorts/CQT7NVY8hOw)**
+
+Presentation of AI Sight [Presentation Link](https://www.canva.com/design/DAG0E9aRTEk/VLnPrsdst3PRbWGfe3-xWA/view?utm_content=DAG0E9aRTEk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h45a1f11f82)
+
+---
+
+## Project Structure
+
+- `ai_models/` — contains training code and model creation for **Money** and **Door** detection models  
+- `pwa_app/` — the full PWA app including frontend (React), backend (TTS), and static assets  
+
+---
+
+
+### 🏠 Home Screen
+
+- Central navigation hub with voice announcements  
+- Made for blind users  
+
+![Home Screen](imgs/home.jpg)
+
+---
+
+### 💰 Money Detection
+
+![Money Detection](imgs/money.jpg)
+
+- TensorFlow.js model runs fully in-browser  
+- Recognizes multiple currency denominations (1, 5, 10, 20, 50)  
+- Calculates **total** value and gives **audio feedback in dinars**  
+- Uses about **10MB** of browser storage  
+- See details and training code in the `ai_models/` folder  
+
+---
+
+### 🚪 Door Detection
+
+![Door Detection](imgs/door.jpg)
+
+- YOLOv8 model runs **fully offline** in-browser  
+- Detects doors in real-time using the phone camera  
+- Similar storage and loading as the Money model  
+- Training code also available in `ai_models/`  
+
+---
+
+
+### 🧠 Fully Offline AI (On-Device)
+- **Money Detection** and **Door Detection** run **entirely in the browser**  
+- Models are built with **TensorFlow.js** and stored locally using **IndexedDB**  
+- Works even when offline on phones  
+- 100% **private** — no images or data sent to any server  
+
+---
+
+### 🚶 Walking Directions
+
+- Real-time GPS-based navigation  
+- Turn-by-turn voice instructions  
+- Uses Google Maps and Directions APIs  
+
+---
+
+### 🔍 View Description
+
+- Sends image to **Gemini AI** to describe the scene  
+
+---
+
+### 📖 Image Text Reader (OCR)
+
+- Uses **Google OCR API**  
+- Gemini AI helps organize and read the extracted text  
+
+---
+
+### 🤖 "Sarah" — AI Assistant on PC
+
+- PC-only voice assistant  
+- Helps with extended tasks and interactions  
+- Demo video (1 min & 55s): [🎥 Sarah AI Assistant – Demo](https://m.youtube.com/shorts/CQT7NVY8hOw)
+
+
+---
+
+## Technology Stack
+
+- **Frontend**: React + Vite  
+- **AI/ML**: TensorFlow.js, YOLOv8 (models stored in IndexedDB)  
+- **Maps**: Google Maps API, Directions API  
+- **Speech**: Google TTS API, Web Speech API  
+
+---
+
+## Accessibility
+
+Made specifically for visually impaired users:  
+- Voice-first UI  
+- Works with **TalkBack** (Android) and **VoiceOver** (iOS)  
+- Button clicks trigger **spoken names**  
+- Simple layout with high contrast and large buttons  
