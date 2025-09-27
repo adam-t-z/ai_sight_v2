@@ -96,10 +96,16 @@ Presentation of AI Sight [Presentation Link](https://www.canva.com/design/DAG0E9
 
 ## Technology Stack
 
-- **Frontend**: React + Vite  
-- **AI/ML**: TensorFlow.js, YOLOv8 (models stored in IndexedDB)  
-- **Maps**: Google Maps API, Directions API  
-- **Speech**: Google TTS API, Web Speech API  
+- React + Vite  
+- TensorFlow.js, YOLOv8 (models stored in IndexedDB)  
+- Google APIs: Google Maps API, Directions API, TTS API, STT API, OCR API, Gemini.
+- Google colab for model training
+- Firebase for database connections.
+- Main Lang: Python & JavaScript
+- Sarah is acting like a backend server on the PC.
+- Sarah uses Kokoro (1st on Hugging Face) for voice conversion
+- Sarah is connected to an LLM and can be run fully offline. (With a descent working GPU)
+- Sarah's LLM is Mistral 7B and can be connected to Falcon 7B.
 
 ---
 
