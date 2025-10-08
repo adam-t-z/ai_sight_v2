@@ -28,3 +28,7 @@ server/service_account.json
 .env
 
 old
+
+public/money_web_model
+public/door_web_model
+src/utils/detect.js
